@@ -1,0 +1,9 @@
+project: savantenvs/WSL2-Linux-Kernel
+target: fuzz_bootconfig
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bootconfig/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bootconfig
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/WSL2-Linux-Kernel
+target: fuzz_libbpf_btf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_libbpf_btf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_libbpf_btf
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/WSL2-Linux-Kernel
+target: fuzz_fdt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fdt/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fdt
+    libfuzzer: true
+    timeout: 10
